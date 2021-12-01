@@ -20,8 +20,11 @@
 To get a local copy up and running follow these simple example steps.
 
 1- Navigate to the button on the top right green "code" button.
-2- In the drop down menu choose "Download Zip".
+2- In the drop down menu choose "Download Zip" or clone it using git.
 3- After extracting the files, you'll have my project on your local machine.
+4- to run the project you'll need to use the following command in your terminal to set up the node modules.
+
+$ npm i
 
 ## Authors
 
