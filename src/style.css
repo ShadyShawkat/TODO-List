@@ -89,8 +89,8 @@ body {
   display: flex;
   flex-direction: column;
   box-shadow: rgba(50, 50, 93, 0.40) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.75) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.55) 0px -2px 6px 0px inset;
+    rgba(0, 0, 0, 0.2) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   border-radius: 10px;
   min-width: 500px;
   width: 700px;
@@ -99,7 +99,7 @@ body {
 }
 
 .container > * {
-  flex-basis: 45px;
+  flex-basis: 50px;
 }
 
 .container h2 {
@@ -160,6 +160,11 @@ body {
   transform: scale(1.25);
 }
 
+.todo-completed{
+  text-decoration: line-through black;
+  color: gray;
+}
+
 .item-edit-icon {
   margin-left: auto;
   cursor: move;
@@ -171,5 +176,5 @@ body {
   padding: 0.75em 0;
   cursor: pointer;
   font-weight: 600;
-  z-index: -1;
+  background: radial-gradient(at 50% 0%, rgba(206, 206, 206, 0.479) 70%, transparent);
 }
