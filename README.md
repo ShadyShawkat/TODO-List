@@ -1,59 +1,44 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# TODO List
 
-> One paragraph statement about the project.
+>"To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete..
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
-
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML & CSS
+- JavaScript
+- Webpacks
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
-
+[Live Demo Link](https://shadyshawkat.github.io/TODO-List/dist)
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+1- Navigate to the button on the top right green "code" button.
 
-### Setup
+2- In the drop down menu choose "Download Zip" or clone it using git using the following command.
+~~~bash
+$ git clone git@github.com:ShadyShawkat/TODO-List.git
+~~~
+3- After extracting the files, you'll have my project on your local machine.
 
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
+4- to run the project you'll need to use the following command in your terminal to set up the node modules.
+~~~bash
+$ npm i
+~~~
 ## Authors
 
-👤 **Author1**
+👤 **Shady Shawkat**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@shadyshawkat](https://github.com/ShadyShawkat)
+- Twitter: [@shadyshawkat](https://twitter.com/ShadyShawkat3)
+- LinkedIn: [shadyshawkat](https://www.linkedin.com/in/shady-shawkat/)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
@@ -64,12 +49,6 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
