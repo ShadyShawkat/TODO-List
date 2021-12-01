@@ -1,5 +1,4 @@
 export default class Task {
-
   static tasks = [
     {
       index: 0,
@@ -24,12 +23,12 @@ export default class Task {
     this.completed = false;
   }
 
-  toggleTaskStatus(index) {
-    Task.tasks = Task.tasks.map(task => {
-      if (task.index == index) {
+  static toggleTaskStatus(index) {
+    Task.tasks = Task.tasks.map((task) => {
+      if (task.index === index) {
         task.completed = !task.completed;
       }
       return task;
-    })
+    });
   }
 }

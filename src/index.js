@@ -1,5 +1,5 @@
 import './style.css';
-import Task from './Task'
+import Task from './Task.js';
 
 window.onload = () => {
   const todoList = document.querySelector('.todo-list');
