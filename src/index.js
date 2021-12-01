@@ -4,17 +4,17 @@ const todoArr = [
   {
     index: 0,
     describtion: 'Do chores',
-    completed: false
+    completed: false,
   },
   {
     index: 1,
     describtion: 'Join board meeting',
-    completed: false
+    completed: false,
   },
   {
     index: 2,
     describtion: 'Walk the dog',
-    completed: true
+    completed: true,
   },
 ];
 
@@ -32,8 +32,4 @@ window.onload = () => {
     `;
     todoList.appendChild(li);
   });
-
-  document.querySelector('.btn-clear').addEventListener('click', () => {
-    console.log('asds')
-  })
-}
+};

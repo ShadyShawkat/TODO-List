@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300&display=swap");
 
 /* CSS Reset */
+
 /* Box sizing rules */
 *,
 *::before,
@@ -39,6 +40,10 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Fira Sans", sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
@@ -78,19 +83,13 @@ select {
 }
 
 /* Main Styles */
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Fira Sans", sans-serif;
-}
-
 .container {
   display: flex;
   flex-direction: column;
-  box-shadow: rgba(50, 50, 93, 0.40) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.2) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow:
+    rgba(50, 50, 93, 0.4) 0 50px 100px -20px,
+    rgba(0, 0, 0, 0.2) 0 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset;
   border-radius: 10px;
   min-width: 500px;
   width: 700px;
@@ -160,7 +159,7 @@ body {
   transform: scale(1.25);
 }
 
-.todo-completed{
+.todo-completed {
   text-decoration: line-through black;
   color: gray;
 }
