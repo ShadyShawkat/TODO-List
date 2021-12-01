@@ -5,8 +5,48 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TODO List</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
-  
+  <div class="container">
+    <h2>Today's To Do</h2>
+    <div class="add-input-container">
+      <input class="todo-input" type="text" placeholder="Add to your list...">
+      <button type="button" class="btn-add-todo">
+        <i class="fas fa-sign-in-alt"></i>
+      </button>
+    </div>
+    <ul class="todo-list">
+      <li class="todo-item">
+        <label>
+          <input type="checkbox" class="todo-item-check">
+          Do chores
+        </label>
+        <i class="fas fa-ellipsis-v item-edit-icon"></i>
+      </li>
+      <li class="todo-item">
+        <label>
+          <input type="checkbox" class="todo-item-check">
+          Do chores
+        </label>
+        <i class="fas fa-ellipsis-v item-edit-icon"></i>
+      </li>
+      <li class="todo-item">
+        <label>
+          <input type="checkbox" class="todo-item-check">
+          Do chores
+        </label>
+        <i class="fas fa-ellipsis-v item-edit-icon"></i>
+      </li>
+      <li class="todo-item">
+        <label>
+          <input type="checkbox" class="todo-item-check">
+          Do chores
+        </label>
+        <i class="fas fa-ellipsis-v item-edit-icon"></i>
+      </li>
+    </ul>
+    <button type="button" class="btn-clear">Clear all completed</button>
+  </div>
 </body>
 </html>
