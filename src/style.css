@@ -125,11 +125,16 @@ select {
   font-style: italic;
 }
 
-.add-input-container .btn-add-todo {
+.btn-add-todo {
   background: transparent;
   border: none;
   cursor: pointer;
   color: gray;
+}
+
+.btn-add-todo:disabled {
+  color: rgba(128, 128, 128, 0.534);
+  cursor: not-allowed;
 }
 
 .todo-list {
@@ -150,6 +155,12 @@ select {
   flex-basis: 50px;
 }
 
+.todo-item label {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
 .todo-list .todo-item:last-child {
   border-bottom: none;
 }
@@ -159,15 +170,36 @@ select {
   transform: scale(1.25);
 }
 
-.todo-completed {
+.todo-item-description {
+  flex: 1;
+  border: none;
+  background-color: transparent;
+  color: black;
+  outline: none;
+}
+
+.todo-completed .todo-item-description{
   text-decoration: line-through black;
   color: gray;
 }
 
-.item-edit-icon {
-  margin-left: auto;
+.item-edit-icon { 
   cursor: move;
   color: gray;
+}
+
+.editing .item-edit-icon { 
+  display: none;
+}
+
+.item-delete-icon { 
+  color: #ff0000;
+  display: none;
+  cursor: pointer;
+}
+
+.editing .item-delete-icon { 
+  display: initial;
 }
 
 .btn-clear {

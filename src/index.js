@@ -3,6 +3,9 @@ import Task from './Task.js';
 import Store from './Store.js';
 
 window.onload = () => {
+  const todoInput = document.querySelector('.todo-input');
+  const addTodoBtn = document.querySelector('.btn-add-todo');
+
   const data = Store.getData();
   if (!data) {
     const dataToBeStored = [
@@ -28,4 +31,21 @@ window.onload = () => {
     Task.tasks = data;
   }
   Task.renderUI();
+
+  addTodoBtn.addEventListener('click', () => {
+    Task.add(todoInput.value.trim());
+    Task.renderUI();
+  });
+
+  todoInput.addEventListener('keyup', function (e) {
+    if(todoInput.value.trim()!== '') {
+      addTodoBtn.disabled = false;
+      if(e.key === 'Enter') {
+        Task.add(todoInput.value.trim());
+        Task.renderUI();
+      }
+    } else {
+      addTodoBtn.disabled = true;
+    }
+  });
 };

@@ -1,5 +1,9 @@
 import Store from './Store.js';
 
+function exitEditing() {
+
+}
+
 export default class Task {
   static tasks = [];
 
@@ -29,12 +33,15 @@ export default class Task {
       li.innerHTML = `
       <label data-index=${todoItem.index} class="${todoItem.completed ? 'todo-completed' : ''}">
         <input type="checkbox" class="todo-item-check" ${todoItem.completed ? 'checked' : ''}>
-        ${todoItem.description}
+        <input type="text" class="todo-item-description" value="${todoItem.description}" disabled>
       </label>
       <i class="fas fa-ellipsis-v item-edit-icon"></i>
+      <i class="fas fa-trash-alt item-delete-icon"></i>
       `;
       todoList.appendChild(li);
     });
+
+    // Event listeners for the checkboxes on each todo item
     const tasksCheckboxes = document.querySelectorAll('.todo-item-check');
     [...tasksCheckboxes].forEach((chkBox) => {
       chkBox.addEventListener('change', (e) => {
@@ -42,5 +49,11 @@ export default class Task {
         Task.toggleTaskStatus(taskNode.dataset.index);
       });
     });
+  }
+
+  static add(description) {
+    const newTask = new Task(description);
+    Task.tasks.push(newTask);
+    Store.setData(Task.tasks);
   }
 }
