@@ -1,4 +1,4 @@
-import Store from './Store.js'
+import Store from './Store.js';
 
 export default class Task {
   static tasks = [];
@@ -10,9 +10,8 @@ export default class Task {
   }
 
   static toggleTaskStatus(index) {
-    console.log(index)
     Task.tasks = Task.tasks.map((task) => {
-      if (task.index === parseInt(index)) {
+      if (task.index === parseInt(index, 10)) {
         task.completed = !task.completed;
       }
       return task;
@@ -41,7 +40,7 @@ export default class Task {
       chkBox.addEventListener('change', (e) => {
         const taskNode = e.target.parentNode;
         Task.toggleTaskStatus(taskNode.dataset.index);
-      })
+      });
     });
   }
 }
