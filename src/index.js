@@ -1,18 +1,31 @@
 import './style.css';
 import Task from './Task.js';
+import Store from './Store.js';
 
 window.onload = () => {
-  const todoList = document.querySelector('.todo-list');
-  Task.tasks.forEach((todoItem) => {
-    const li = document.createElement('li');
-    li.className = 'todo-item';
-    li.innerHTML = `
-    <label data-index=${todoItem.index} class="${todoItem.completed ? 'todo-completed' : ''}">
-      <input type="checkbox" class="todo-item-check" ${todoItem.completed ? 'checked' : ''}>
-      ${todoItem.description}
-    </label>
-    <i class="fas fa-ellipsis-v item-edit-icon"></i>
-    `;
-    todoList.appendChild(li);
-  });
+  const data = Store.getData();
+  if (!data) {
+    const dataToBeStored = [
+      {
+        index: 0,
+        description: 'Do chores',
+        completed: false,
+      },
+      {
+        index: 1,
+        description: 'Join board meeting',
+        completed: false,
+      },
+      {
+        index: 2,
+        description: 'Walk the dog',
+        completed: true,
+      },
+    ];
+    Store.setData(dataToBeStored);
+    Task.tasks = dataToBeStored;
+  } else {
+    Task.tasks = data;
+  }
+  Task.renderUI();
 };
