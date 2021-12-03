@@ -178,27 +178,27 @@ select {
   outline: none;
 }
 
-.todo-completed .todo-item-description{
+.todo-completed .todo-item-description {
   text-decoration: line-through black;
   color: gray;
 }
 
-.item-edit-icon { 
+.item-edit-icon {
   cursor: move;
   color: gray;
 }
 
-.editing .item-edit-icon { 
+.editing .item-edit-icon {
   display: none;
 }
 
-.item-delete-icon { 
-  color: #ff0000;
+.item-delete-icon {
+  color: #f00;
   display: none;
   cursor: pointer;
 }
 
-.editing .item-delete-icon { 
+.editing .item-delete-icon {
   display: initial;
 }
 
