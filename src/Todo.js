@@ -117,4 +117,19 @@ export default class Todo {
     Store.setData(Todo.todos);
     Todo.renderUI();
   }
+
+  static deleteTodos(...indices) {
+    indices.forEach((index) => {
+      Todo.todos = Todo.todos.filter((todo) => todo.index !== index);
+    });
+    Todo.renderUI();
+    Store.setData(Todo.todos);
+  }
+
+  static reassignTodoIndices() {
+    Todo.todos = Todo.todos.map((todo, counter) => {
+      todo.index = counter;
+      return todo;
+    });
+  }
 }
