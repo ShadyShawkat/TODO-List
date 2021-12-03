@@ -1,10 +1,11 @@
 import './style.css';
-import Task from './Task.js';
+import Todo from './Todo.js';
 import Store from './Store.js';
 
 window.onload = () => {
   const todoInput = document.querySelector('.todo-input');
   const addTodoBtn = document.querySelector('.btn-add-todo');
+  const clearAllBtn = document.querySelector('.btn-clear');
 
   const data = Store.getData();
   if (!data) {
@@ -26,26 +27,36 @@ window.onload = () => {
       },
     ];
     Store.setData(dataToBeStored);
-    Task.tasks = dataToBeStored;
+    Todo.todos = dataToBeStored;
   } else {
-    Task.tasks = data;
+    Todo.todos = data;
   }
-  Task.renderUI();
+  Todo.renderUI();
 
-  addTodoBtn.addEventListener('click', () => {
-    Task.add(todoInput.value.trim());
-    Task.renderUI();
+  addTodoBtn.addEventListener('click', (e) => {
+    Todo.add(todoInput.value.trim());
+    todoInput.value = '';
+    e.target.parentNode.disabled = true;
+    Todo.renderUI();
   });
 
-  todoInput.addEventListener('keyup', function (e) {
-    if(todoInput.value.trim()!== '') {
+  todoInput.addEventListener('keyup', (e) => {
+    if (todoInput.value.trim() !== '') {
       addTodoBtn.disabled = false;
-      if(e.key === 'Enter') {
-        Task.add(todoInput.value.trim());
-        Task.renderUI();
+      if (e.key === 'Enter') {
+        Todo.add(todoInput.value.trim());
+        todoInput.value = '';
+        addTodoBtn.disabled = true;
+        Todo.renderUI();
       }
     } else {
       addTodoBtn.disabled = true;
     }
+  });
+
+  clearAllBtn.addEventListener('click', () => {
+    const todosToBeRemoved = Todo.todos.filter((todo) => todo.completed);
+    const todosIndices = todosToBeRemoved.map((todo) => todo.index);
+    Todo.deleteTodos(...todosIndices);
   });
 };
